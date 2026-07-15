@@ -1,0 +1,8 @@
+cellxgene-census
+scanpy
+anndata
+scikit-learn
+numpy
+torch
+transformers
+# fine-tune arm (GPU): modal   # serverless GPU for the bio-FM fine-tune

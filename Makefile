@@ -1,4 +1,4 @@
-.PHONY: build validate audit check help
+.PHONY: build validate audit site check help
 
 help:
 	@echo "longevity-loop — an AI-native compounding loop for aging science"
@@ -15,6 +15,9 @@ validate:
 
 audit:
 	python3 scripts/audit.py --gate 80
+
+site:
+	python3 scripts/build_site.py
 
 # Finish line: data well-formed, still an AI-native loop, and generated docs match.
 check: validate audit

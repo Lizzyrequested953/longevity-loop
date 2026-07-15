@@ -45,6 +45,7 @@ Every turn of the loop, logged honestly. `done` requires a PROOF (result incl. t
 | Turn | Question | Stage | Status |
 |---|---|---|:--|
 | [turn-01-biolearn-baseline](turns/turn-01-biolearn-baseline) | Does a standard epigenetic clock (e.g. PhenoAge) predict the challenge outcome better than chronological age on a held-out split? | VERIFY | 🧩 scaffolded |
+| [turn-02-biofm-finetune](turns/turn-02-biofm-finetune) | Does fine-tuning an open single-cell FM beat a frozen-embedding linear probe at predicting age? | MODEL | 🧩 scaffolded |
 
 ---
 

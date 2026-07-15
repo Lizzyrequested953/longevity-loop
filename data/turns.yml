@@ -8,3 +8,10 @@
   question: "Does a standard epigenetic clock (e.g. PhenoAge) predict the challenge outcome better than chronological age on a held-out split?"
   path: "turns/turn-01-biolearn-baseline"
   proof: "turns/turn-01-biolearn-baseline/PROOF.md"
+- id: "turn-02-biofm-finetune"
+  title: "Fine-tune an open bio-FM (Geneformer/scGPT) vs a frozen probe on an aging task"
+  stage: "MODEL"
+  status: scaffolded
+  question: "Does fine-tuning an open single-cell FM beat a frozen-embedding linear probe at predicting age?"
+  path: "turns/turn-02-biofm-finetune"
+  proof: "turns/turn-02-biofm-finetune/PROOF.md"
