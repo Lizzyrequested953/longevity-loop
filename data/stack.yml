@@ -1,0 +1,24 @@
+# The buildable AI x aging toolkit — open models, tools, data, clocks, benchmarks.
+# kind: model | tool | dataset | clock | benchmark.  Verified 2026-07; access-gated flagged.
+- { name: "Geneformer", kind: model, url: "https://huggingface.co/ctheodoris/Geneformer", note: "Transformer on ~30-104M single-cell transcriptomes; fine-tune for cell-type / perturbation / aging tasks." }
+- { name: "scGPT", kind: model, url: "https://github.com/bowang-lab/scGPT", note: "GPT-style single-cell foundation model; fine-tune for annotation, integration, perturbation prediction." }
+- { name: "ESM-2", kind: model, url: "https://github.com/facebookresearch/esm", note: "Protein LM (8M-650M) that runs on a laptop; embeddings for variant-effect on longevity genes." }
+- { name: "TxGNN", kind: model, url: "https://github.com/mims-harvard/TxGNN", note: "GNN over a drug/disease knowledge graph for zero-shot repurposing; rank candidate longevity interventions." }
+- { name: "AlphaFold", kind: tool, url: "https://github.com/google-deepmind/alphafold", note: "Structure prediction; usually query the precomputed AlphaFold DB rather than run locally." }
+- { name: "scanpy", kind: tool, url: "https://github.com/scverse/scanpy", note: "Standard single-cell preprocessing (QC/clustering/DE) before any aging model." }
+- { name: "CZ CELLxGENE Census", kind: tool, url: "https://github.com/chanzuckerberg/cellxgene-census", note: "API to slice ~33M+ standardized cells by tissue/age/disease in seconds — fastest cohort pull." }
+- { name: "pyaging", kind: tool, url: "https://github.com/rsinghlab/pyaging", note: "PyTorch package bundling 50+ aging clocks with one API — score biological age on a laptop." }
+- { name: "Biolearn", kind: tool, url: "https://bio-learn.github.io/", note: "Open standardized platform for the Biomarkers of Aging Challenge — the code-only leaderboard to compete on." }
+- { name: "scAge", kind: clock, url: "https://github.com/alex-trapp/scAge", note: "Epigenetic age from sparse single-cell methylation — detect cell-level aging + rejuvenation." }
+- { name: "AltumAge", kind: model, url: "https://github.com/rsinghlab/AltumAge", note: "Deep pan-tissue methylation clock (MLP over ~20k CpGs) to fine-tune/benchmark vs ElasticNet clocks." }
+- { name: "DunedinPACE", kind: clock, url: "https://github.com/danbelsky/DunedinPACE", note: "Pace-of-aging (rate, not age) from 450k/EPIC — a strong intervention outcome variable." }
+- { name: "Tabula Muris Senis", kind: dataset, url: "https://registry.opendata.aws/tabula-muris-senis/", note: "Mouse aging cell atlas (~500k cells, 18 organs) — the go-to open single-cell aging benchmark." }
+- { name: "GTEx Portal", kind: dataset, url: "https://gtexportal.org/", note: "Human multi-tissue expression with donor age; expression matrices download freely (genotypes gated)." }
+- { name: "NCBI GEO", kind: dataset, url: "https://www.ncbi.nlm.nih.gov/geo/", note: "Largest public expression/epigenomics archive; search 'age'-flagged series to build custom aging sets." }
+- { name: "Human Cell Atlas", kind: dataset, url: "https://data.humancellatlas.org/", note: "Open multi-omic reference maps (70M+ cells) for age-stratified tissue baselines." }
+- { name: "HAGR (GenAge / CellAge)", kind: dataset, url: "https://genomics.senescence.info/", note: "Curated aging/senescence gene sets (GenAge 307, CellAge 866) — priors / feature filters." }
+- { name: "UK Biobank", kind: dataset, url: "https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/", note: "500k multi-omic + health cohort — ACCESS-GATED (application/fee/cloud-only), not laptop-downloadable." }
+- { name: "Biomarkers of Aging Challenge", kind: benchmark, url: "https://www.longevityprize.com/prize/biomarker", note: "Open competition + curated dataset (methylation/proteomics/outcomes, 500+ people) — the North-Star code-only leaderboard." }
+- { name: "Open Problems in Single-Cell", kind: benchmark, url: "https://github.com/openproblems-bio/openproblems", note: "Community benchmarking harness (tasks/datasets/metrics) to fairly evaluate a model vs baselines." }
+- { name: "LAB-Bench", kind: benchmark, url: "https://github.com/Future-House/LAB-Bench", note: "2,457-question benchmark for LLMs on biology research tasks (literature, sequences, DBs)." }
+- { name: "BixBench", kind: benchmark, url: "https://github.com/Future-House/BixBench", note: "Benchmark for LLM agents on real computational-biology analysis workflows." }

@@ -1,0 +1,18 @@
+# Companies to know / target for collaboration. Verified 2026-07 (defunct sites omitted).
+# ai_native = ML central to the platform.
+- { name: "NewLimit", focus: "AI-guided epigenetic reprogramming to restore youthful cell function", ai_native: true, backers: "Brian Armstrong, Jacob Kimmel; Kleiner Perkins, Eli Lilly", url: "https://www.newlimit.com", stage: "well-funded-private" }
+- { name: "Retro Biosciences", focus: "reverse cellular aging (reprogramming, autophagy) + AI protein design", ai_native: true, backers: "Joe Betts-LaCroix; Sam Altman", url: "https://www.retro.bio", stage: "well-funded-private" }
+- { name: "Gero", focus: "physics-based AI modeling of aging + generative molecule design", ai_native: true, backers: "Peter Fedichev; Pfizer, Chugai deals", url: "https://www.gero.ai", stage: "well-funded-private" }
+- { name: "Shift Bioscience", focus: "AI 'virtual cell' for safe single-gene cellular reprogramming", ai_native: true, backers: "Daniel Ives; BGF", url: "https://shiftbioscience.com", stage: "early" }
+- { name: "BioAge Labs", focus: "aging-biology multi-omics ML platform (metabolic disease)", ai_native: true, backers: "Kristen Fortney (Nasdaq: BIOA)", url: "https://www.bioagelabs.com", stage: "public" }
+- { name: "Insilico Medicine", focus: "generative AI drug discovery (PandaOmics, Chemistry42) + clinical pipeline", ai_native: true, backers: "Alex Zhavoronkov; listed HKEX", url: "https://insilico.com", stage: "public" }
+- { name: "Altos Labs", focus: "cellular rejuvenation via partial reprogramming (+ growing computation arm)", ai_native: false, backers: "Hans Bishop; Bezos, Yuri Milner", url: "https://www.altoslabs.com", stage: "well-funded-private" }
+- { name: "Calico Life Sciences", focus: "basic biology of aging → age-related-disease medicines", ai_native: false, backers: "Arthur Levinson; Alphabet", url: "https://www.calicolabs.com", stage: "well-funded-private" }
+- { name: "Recursion", focus: "AI drug discovery via cellular imaging (Recursion OS; merged Exscientia)", ai_native: true, backers: "Chris Gibson (Nasdaq: RXRX)", url: "https://www.recursion.com", stage: "public" }
+- { name: "Isomorphic Labs", focus: "AI drug design built on AlphaFold", ai_native: true, backers: "Demis Hassabis; DeepMind spinout", url: "https://www.isomorphiclabs.com", stage: "well-funded-private" }
+- { name: "Cellarity", focus: "AI on single-cell transcriptomics to design cell-state-correcting medicines", ai_native: true, backers: "Flagship Pioneering", url: "https://cellarity.com", stage: "well-funded-private" }
+- { name: "Xaira Therapeutics", focus: "AI-native drug discovery on David Baker's generative protein models", ai_native: true, backers: "Marc Tessier-Lavigne, David Baker; ARCH, Foresite", url: "https://xaira.com", stage: "well-funded-private" }
+- { name: "Rubedo Life Sciences", focus: "AI-driven senolytics discovery (ALEMBIC platform)", ai_native: true, backers: "Khosla Ventures, Ahren", url: "https://www.rubedolife.com", stage: "well-funded-private" }
+- { name: "Gordian Biotechnology", focus: "high-throughput in-vivo pooled screening (Mosaic) for diseases of aging", ai_native: false, backers: "Founders Fund, Fifty Years, Longevity Fund", url: "https://www.gordian.bio", stage: "early" }
+- { name: "Loyal", focus: "canine longevity — lifespan-extension drugs for dogs", ai_native: false, backers: "Celine Halioua", url: "https://loyal.com", stage: "well-funded-private" }
+- { name: "Centenara Labs", focus: "hallmarks-of-aging therapeutics portfolio (fmr Rejuveron)", ai_native: false, backers: "Zürich-based", url: "https://www.centenara.com", stage: "well-funded-private" }

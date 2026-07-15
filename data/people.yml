@@ -1,0 +1,18 @@
+# Researchers to learn from + (where approachable) engage with. Verified 2026-07.
+# tag: ai_forward = ML/compute central to their work; approachable = active in open community.
+- { name: "João Pedro de Magalhães", org: "University of Birmingham", known_for: "HAGR aging databases; computational biogerontology", url: "https://x.com/jpsenescence", ai_forward: true, approachable: true }
+- { name: "Alex Zhavoronkov", org: "Insilico Medicine", known_for: "deep-learning aging clocks + generative AI drug discovery", url: "https://x.com/biogerontology", ai_forward: true, approachable: true }
+- { name: "Peter Fedichev", org: "Gero", known_for: "physics/AI dynamical models of aging", url: "https://x.com/fedichev", ai_forward: true, approachable: true }
+- { name: "Jacob Kimmel", org: "NewLimit (fmr Calico)", known_for: "ML-designed reprogramming payloads; bio foundation models", url: "https://x.com/jacobkimmel", ai_forward: true, approachable: true }
+- { name: "Morgan Levine", org: "Altos Labs (fmr Yale)", known_for: "epigenetic aging clocks (PhenoAge)", url: "https://x.com/DrMorganLevine", ai_forward: true, approachable: true }
+- { name: "Tony Wyss-Coray", org: "Stanford", known_for: "plasma-proteomic organ aging clocks", url: "https://x.com/wysscoray", ai_forward: true, approachable: true }
+- { name: "Vadim Gladyshev", org: "Harvard Medical School", known_for: "mouse + single-cell (scAge) aging clocks", url: "https://gladyshevlab.bwh.harvard.edu", ai_forward: true, approachable: false }
+- { name: "George Church", org: "Harvard / Wyss Institute", known_for: "gene-therapy longevity; synthetic biology", url: "https://x.com/geochurch", ai_forward: true, approachable: true }
+- { name: "Nir Barzilai", org: "Albert Einstein College of Medicine", known_for: "centenarian genetics; TAME metformin trial", url: "https://x.com/NirBarzilaiMD", ai_forward: false, approachable: true }
+- { name: "Matt Kaeberlein", org: "Optispan (fmr U. Washington)", known_for: "rapamycin geroscience; Dog Aging Project", url: "https://x.com/mkaeberlein", ai_forward: false, approachable: true }
+- { name: "David Sinclair", org: "Harvard Medical School", known_for: "information theory of aging; reprogramming; sirtuins", url: "https://x.com/davidasinclair", ai_forward: false, approachable: true }
+- { name: "Eric Verdin", org: "Buck Institute", known_for: "geroscience; ketone bodies; immune aging", url: "https://x.com/EricVerdin", ai_forward: false, approachable: true }
+- { name: "Andrew Steele", org: "Independent (author of 'Ageless')", known_for: "longevity science communication", url: "https://x.com/statto", ai_forward: false, approachable: true }
+- { name: "Charles Brenner", org: "City of Hope", known_for: "NAD+ metabolism; vocal longevity-hype skeptic (a good reality check)", url: "https://x.com/CharlesMBrenner", ai_forward: false, approachable: true }
+- { name: "Joe Betts-LaCroix", org: "Retro Biosciences", known_for: "reprogramming + autophagy longevity company", url: "https://x.com/bettslacroix", ai_forward: false, approachable: true }
+- { name: "Kristen Fortney", org: "BioAge Labs", known_for: "ML on longitudinal human data for aging drug discovery", url: "https://bioagelabs.com", ai_forward: true, approachable: false }

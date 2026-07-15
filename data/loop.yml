@@ -1,0 +1,50 @@
+# The AI-native compounding loop — its stages (rendered) + a self-audit (gated in CI).
+# Same discipline as FM-os: verify at the artifact · no evidence ⇒ No · every turn compounds.
+pass_threshold: 80
+
+# One turn of the flywheel (rendered in the README):
+stages:
+  - { n: 1, name: "QUESTION", do: "State one falsifiable question + the metric that settles it (and the null you'd accept)." }
+  - { n: 2, name: "DATA", do: "Pull an OPEN aging dataset (CELLxGENE, Tabula Muris Senis, GEO, GTEx, the Biomarkers challenge set)." }
+  - { n: 3, name: "MODEL", do: "Analyze / fine-tune an open bio-FM (pyaging, Geneformer, scGPT) — cheaply, reproducibly." }
+  - { n: 4, name: "VERIFY", do: "Score on a public verifier — the Biolearn leaderboard or a held-out benchmark. No evidence ⇒ no claim." }
+  - { n: 5, name: "WRITE-UP", do: "Honest report: result AND the null/failure, threats-to-validity, a reproduce command." }
+  - { n: 6, name: "SHARE", do: "Build in public — repo + thread + explainer; route to the human hubs (VitaDAO, LBF, Foresight)." }
+  - { n: 7, name: "COMPOUND", do: "The artifact recruits feedback, collaborators, and funding → they unlock the next, harder question." }
+
+# Self-audit principles — audit.py checks each has real evidence in the repo.
+principles:
+  - id: falsifiable-loop
+    statement: "Work is organized as falsifiable turns with a metric, not one-shot output."
+    evidence:
+      - { file: "data/roadmap.yml" }
+      - { grep: "falsifiable|metric|null", file: "data/loop.yml" }
+  - id: open-data-reproducible
+    statement: "Grounded in OPEN, reproducible data — anyone can rerun it."
+    evidence:
+      - { grep: "CELLxGENE|Tabula Muris|GEO|GTEx|Biolearn", file: "data/stack.yml" }
+  - id: public-verifier
+    statement: "Claims are scored on a public verifier / leaderboard, not asserted."
+    evidence:
+      - { grep: "Biomarkers of Aging|Biolearn|leaderboard", file: "data/meta.yml" }
+      - { grep: "VERIFY", file: "data/loop.yml" }
+  - id: no-evidence-no-claim
+    statement: "No evidence ⇒ no claim; computed-on-public-data is kept separate from wet-lab claims."
+    evidence:
+      - { grep: "no evidence|No evidence|independent validation", file: "data/meta.yml" }
+  - id: build-in-public
+    statement: "Every turn ships a public artifact that can recruit people, feedback, and funding."
+    evidence:
+      - { file: "docs/ROADMAP.md" }
+      - { grep: "build.in.public|Share|SHARE", file: "data/loop.yml" }
+  - id: compounding-memory
+    statement: "Each turn adds durable capability (data, tool, connection) so the bar ratchets up."
+    evidence:
+      - { file: "data/people.yml" }
+      - { file: "data/startups.yml" }
+      - { file: "data/ecosystem.yml" }
+  - id: agent-native-harness
+    statement: "The loop is driven by non-interactive commands with gates (make check)."
+    evidence:
+      - { file: "Makefile" }
+      - { grep: "audit|validate|--check", file: "Makefile" }

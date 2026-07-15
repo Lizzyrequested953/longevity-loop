@@ -1,0 +1,17 @@
+# Branding + layout for longevity-loop. README is GENERATED from data/*.yml.
+repo_owner: wjlgatech
+repo_name: longevity-loop
+title: "🧬♻️ longevity-loop — an AI-native compounding loop for aging science"
+tagline: >-
+  A solo builder's public, self-improving loop for AI × longevity: pick a
+  falsifiable question → analyze open aging data → score on a public verifier →
+  write it up honestly → share → let the artifact recruit people, feedback, and
+  funding → repeat, harder. Built in public, verified not vibed.
+north_star: >-
+  **North star:** climb a credibility-gated, code-only leaderboard (the
+  [Biomarkers of Aging Challenge](https://www.longevityprize.com/prize/biomarker)
+  on the open Biolearn platform) — real signal in aging science with **no wet lab**.
+disclaimer: >-
+  Not medical advice. Computational results on public data are labeled as such and
+  kept strictly separate from any wet-lab/therapeutic claim (which requires
+  independent validation). No evidence ⇒ no claim.
