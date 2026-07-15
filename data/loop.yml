@@ -48,3 +48,9 @@ principles:
     evidence:
       - { file: "Makefile" }
       - { grep: "audit|validate|--check", file: "Makefile" }
+  - id: turns-logged
+    statement: "Every loop turn is logged with an honest status; 'done' requires a PROOF."
+    evidence:
+      - { file: "data/turns.yml" }
+      - { file: "turns/turn-01-biolearn-baseline/PROOF.md" }
+      - { grep: "no evidence|PROOF", file: "data/turns.yml" }

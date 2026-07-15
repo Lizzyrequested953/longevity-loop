@@ -1,0 +1,10 @@
+# The build-in-public turns ledger. Each turn = one pass of the loop, with an
+# honest status. status: scaffolded | in-progress | done. done REQUIRES a PROOF.md
+# (result incl. the null + a reproduce command) — no evidence ⇒ not done.
+- id: "turn-01-biolearn-baseline"
+  title: "Biolearn baseline on the Biomarkers of Aging Challenge"
+  stage: "VERIFY"
+  status: scaffolded
+  question: "Does a standard epigenetic clock (e.g. PhenoAge) predict the challenge outcome better than chronological age on a held-out split?"
+  path: "turns/turn-01-biolearn-baseline"
+  proof: "turns/turn-01-biolearn-baseline/PROOF.md"

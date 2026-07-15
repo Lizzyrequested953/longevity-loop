@@ -7,6 +7,11 @@ tagline: >-
   falsifiable question → analyze open aging data → score on a public verifier →
   write it up honestly → share → let the artifact recruit people, feedback, and
   funding → repeat, harder. Built in public, verified not vibed.
+sibling_banner: >-
+  🛠️ **Method & tooling:
+  [FM-os](https://github.com/wjlgatech/FM-os)** — the SLM/foundation-model-ops hub
+  and the closed-loop machinery this project runs on. longevity-loop is FM-os
+  applied to a real mission.
 north_star: >-
   **North star:** climb a credibility-gated, code-only leaderboard (the
   [Biomarkers of Aging Challenge](https://www.longevityprize.com/prize/biomarker)

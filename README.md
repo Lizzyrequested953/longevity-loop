@@ -6,6 +6,8 @@
 [![Last Updated](https://img.shields.io/github/last-commit/wjlgatech/longevity-loop?style=flat-square&label=last%20turn)](https://github.com/wjlgatech/longevity-loop/commits/main)
 [![License](https://img.shields.io/github/license/wjlgatech/longevity-loop?style=flat-square)](LICENSE)
 
+🛠️ **Method & tooling: [FM-os](https://github.com/wjlgatech/FM-os)** — the SLM/foundation-model-ops hub and the closed-loop machinery this project runs on. longevity-loop is FM-os applied to a real mission.
+
 A solo builder's public, self-improving loop for AI × longevity: pick a falsifiable question → analyze open aging data → score on a public verifier → write it up honestly → share → let the artifact recruit people, feedback, and funding → repeat, harder. Built in public, verified not vibed.
 
 **North star:** climb a credibility-gated, code-only leaderboard (the [Biomarkers of Aging Challenge](https://www.longevityprize.com/prize/biomarker) on the open Biolearn platform) — real signal in aging science with **no wet lab**.
@@ -33,6 +35,16 @@ Each turn is falsifiable and ends in a shared, verifiable artifact. No evidence 
 | 7 | **COMPOUND** | The artifact recruits feedback, collaborators, and funding → they unlock the next, harder question. |
 
 > ⑦ COMPOUND feeds back into ① — each turn adds data, a tool, or a connection, so the next question is bigger.
+
+---
+
+<h2 id="turns">📓 Turns Log</h2>
+
+Every turn of the loop, logged honestly. `done` requires a PROOF (result incl. the null + a reproduce command).
+
+| Turn | Question | Stage | Status |
+|---|---|---|:--|
+| [turn-01-biolearn-baseline](turns/turn-01-biolearn-baseline) | Does a standard epigenetic clock (e.g. PhenoAge) predict the challenge outcome better than chronological age on a held-out split? | VERIFY | 🧩 scaffolded |
 
 ---
 

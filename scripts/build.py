@@ -30,6 +30,7 @@ def esc(t: object) -> str:
 def render_readme() -> str:
     meta, loop, road = load("meta"), load("loop"), load("roadmap")
     people, startups, stack, eco = load("people"), load("startups"), load("stack"), load("ecosystem")
+    turns = load("turns")
     slug = f"{meta['repo_owner']}/{meta['repo_name']}"
     L: list[str] = []
 
@@ -39,6 +40,7 @@ def render_readme() -> str:
         f"[![CI]({BADGE}/actions/workflow/status/{slug}/ci.yml?style=flat-square&label=loop%20check)](https://github.com/{slug}/actions)",
         f"[![Last Updated]({BADGE}/last-commit/{slug}?style=flat-square&label=last%20turn)](https://github.com/{slug}/commits/main)",
         f"[![License]({BADGE}/license/{slug}?style=flat-square)](LICENSE)", "",
+        esc(meta["sibling_banner"]), "",
         esc(meta["tagline"]), "",
         esc(meta["north_star"]), "",
         "</div>", "", "---", "",
@@ -52,6 +54,15 @@ def render_readme() -> str:
     for s in loop["stages"]:
         L.append(f"| {s['n']} | **{esc(s['name'])}** | {esc(s['do'])} |")
     L += ["", "> ⑦ COMPOUND feeds back into ① — each turn adds data, a tool, or a connection, so the next question is bigger.", "", "---", ""]
+
+    # Turns ledger (build-in-public progress)
+    icon = {"scaffolded": "🧩", "in-progress": "🔄", "done": "✅"}
+    L += ['<h2 id="turns">📓 Turns Log</h2>', "",
+          "Every turn of the loop, logged honestly. `done` requires a PROOF (result incl. the null + a reproduce command).", "",
+          "| Turn | Question | Stage | Status |", "|---|---|---|:--|"]
+    for t in turns:
+        L.append(f"| [{esc(t['id'])}]({t['path']}) | {esc(t['question'])} | {esc(t['stage'])} | {icon.get(t['status'],'')} {esc(t['status'])} |")
+    L += ["", "---", ""]
 
     # Roadmap summary
     L += ['<h2 id="90-day-roadmap">🗺️ 90-Day Roadmap</h2>', "",
