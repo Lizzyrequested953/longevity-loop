@@ -8,6 +8,7 @@ on:
   workflow_dispatch: {}
 permissions:
   contents: write
+  actions: write # to dispatch pages.yml (a GITHUB_TOKEN push can't trigger it)
 concurrency: { group: recap, cancel-in-progress: false }
 jobs:
   recap:
@@ -25,7 +26,9 @@ jobs:
           SINCE=$(git rev-list -1 --before="1 day ago" HEAD || true)
           DATE=$(date -u +%F)
           python3 scripts/recap.py --date "$DATE" --since "$SINCE"
-      - name: Commit if a recap was written
+      - name: Commit + deploy if a recap was written
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -n "$(git status --porcelain site/writings site/feed.xml)" ]; then
             git config user.name "recap-bot"
@@ -33,6 +36,8 @@ jobs:
             git add site/writings site/feed.xml
             git commit -m "chore(recap): daily build-in-public explainer"
             git push
+            # A GITHUB_TOKEN push does NOT trigger pages.yml, so dispatch it explicitly.
+            gh workflow run pages.yml
           else
             echo "Quiet day — nothing to publish."
           fi
