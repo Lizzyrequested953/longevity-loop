@@ -20,11 +20,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 scripts/track.py
+          python3 scripts/synthesize.py
           python3 scripts/build_graph.py
       - uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "chore: weekly frontier refresh"
-          title: "chore: weekly frontier refresh (arXiv + GitHub signal)"
-          body: "Automated: refreshed data/_frontier.yml + the field graph. Review what moved and merge."
+          commit-message: "chore: weekly frontier refresh + synthesis"
+          title: "chore: weekly frontier refresh (arXiv + GitHub + Europe PMC synthesis)"
+          body: |
+            Automated weekly signal:
+            - `data/_frontier.yml` — live arXiv/GitHub activity (track.py)
+            - `data/_synthesis.md` — DRAFT frontier-update + roadmap-delta proposals (synthesize.py)
+            - the field graph rebuilt
+
+            **Human-gated:** review `data/_synthesis.md`, confirm each match's identity + quote against
+            the linked source, then promote what's real into `data/frontier.yml` / `data/roadmap.yml`.
+            No evidence ⇒ no claim — nothing here is merged as fact automatically.
           branch: bot/frontier
           delete-branch: true

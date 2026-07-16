@@ -55,10 +55,12 @@ principles:
       - { file: "scripts/eval.py" }
       - { grep: "before|after", file: "data/executions.yml" }
   - id: frontier-tracked
-    statement: "We follow the frontier: recent works (verified) + a refreshable live tracker + a field graph."
+    statement: "We follow the frontier: recent works (verified) + a refreshable live tracker + a synthesizer that drafts roadmap deltas + a field graph."
     evidence:
       - { file: "data/frontier.yml" }
       - { file: "scripts/track.py" }
+      - { file: "scripts/synthesize.py" }
+      - { grep: "no evidence|NO EVIDENCE|human-gated|human review", file: "scripts/synthesize.py" }
       - { file: "scripts/build_graph.py" }
   - id: turns-logged
     statement: "Every loop turn is logged with an honest status; 'done' requires a PROOF."
