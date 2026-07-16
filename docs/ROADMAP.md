@@ -4,7 +4,7 @@ _Generated from `data/roadmap.yml`. Three tracks every week: 🧠 Knowledge · �
 
 - 🧠 Knowledge — ramp on aging biology fast; verify every claim against a primary paper (TRUE = evidenced).
 - 🛠️ Tooling — each week ships runnable, gated code (the loop); cheap fine-tunes on Tinker/Modal.
-- 🤝 Connections — build in public; reach the hubs + people with an artifact in hand, never empty-handed.
+- 🤝 Connections — build in public; reach the hubs + people with an artifact in hand, never empty-handed. In Act II this is the bridge: the credential network (Genentech, Yale/Levine, Georgia Tech) turns computation into bench access, then a raise.
 
 ## Phase 1 — Foundation & First Signal · Days 1–30
 
@@ -74,8 +74,31 @@ _Convert signal into a preprint, non-dilutive funding, and a deliberate fork in 
 ### Week 12
 - 🧠 **Knowledge** — Retro: what compounded, what to do next-90 (write it in public).
 - 🛠️ **Tooling** — Ship the v2 loop with everything learned baked in.
-- 🤝 **Connections** — Fork in the road: apply to age1 (company) vs continue open + lab partnership — decide from the pull you generated.
+- 🤝 **Connections** — Commit to the sequenced path (comp → wet-lab → company): lock the lab partnership that becomes Act II, and prep the age1 application — decide from the pull you generated, not from a standing start.
 
-> ✅ **GATE 3 — a preprint OR top-decile leaderboard · non-dilutive funding · a named collaborator · a clear next-90 plan.**
+> ✅ **GATE 3 — a preprint OR top-decile leaderboard · non-dilutive funding · a named collaborator · a lab partnership lined up for Act II.**
+
+---
+
+## Act II — Wet-lab validation & spin-out · Days 91–180 (Months 4–6)
+
+_Sequenced bridge: convert the computational finding + your credential network (Genentech, Yale/Levine orbit, Georgia Tech) into a lab-validated result, then an incorporated, fundable company. Full-time, raise-ready._
+
+### Week 13–15
+- 🧠 **Knowledge** — The translational gap — what makes a computational aging finding wet-lab-testable: assay design, cell/mouse models, and what an academic lab vs a CRO can actually run.
+- 🛠️ **Tooling** — Turn the validated computational finding into ONE crisp, pre-registered wet-lab hypothesis + protocol; package your analysis as the 'dry' half of a joint dry+wet study a partner can execute.
+- 🤝 **Connections** — Activate the network for the PARTNERSHIP (not just a chat): warm-intro a Yale lab (Levine orbit) + a Genentech-alum PI/team; pitch 'I bring the computation + the funding legwork, you bring the bench' → secure 1 lab partnership with bench access.
+
+### Week 16–20
+- 🧠 **Knowledge** — Rigor + IP hygiene from your Genentech side: GLP-ish standards, freedom-to-operate, what a sponsored-research vs collaboration agreement gives you.
+- 🛠️ **Tooling** — Run the joint dry+wet study: the partner lab executes the assay, you own the analysis → FIRST real wet-lab validation (or a clean, honest null) of your computational hypothesis.
+- 🤝 **Connections** — Unlock PI-gated funding through the partnership (Impetus / Hevolution); convert the result into a co-authored preprint; recruit a wet-lab-capable co-founder from the Genentech/Yale network.
+
+### Week 21–24
+- 🧠 **Knowledge** — Company formation for a dry+wet longevity startup: the wedge (your computational platform as the moat), the milestone-based ask, what a pre-seed actually funds.
+- 🛠️ **Tooling** — Incorporate; assemble the founding artifact — the computational platform + the lab-validated finding + the working dry→wet loop as proof, not a promise.
+- 🤝 **Connections** — Raise-ready: apply to age1 (Deming) and raise a pre-seed on your track record + Genentech network; convert the lab partnership into a founding collaboration or sponsored-research deal.
+
+> ✅ **GATE 4 — a lab-validated (or cleanly null) finding · a co-authored preprint · an incorporated entity + a wet-lab co-founder · age1 acceptance OR a pre-seed raise underway.**
 
 ---

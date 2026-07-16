@@ -77,3 +77,29 @@
   done: false
   eval: { metric: "preprint posted / leaderboard percentile", before: "none", after: "pending" }
   proof: "-"
+
+# ── ACT II — WET-LAB BRIDGE & SPIN-OUT (network-leveraged; eval stays pending, never faked) ──
+- id: E13
+  phase: "P4 · Wet-lab bridge"
+  item: "Secure a lab partnership — computation-for-bench (Yale/Levine orbit or Genentech-alum PI)"
+  done: false
+  eval: { metric: "lab partnerships with bench access", before: "0", after: "pending" }
+  proof: "-"
+- id: E14
+  phase: "P4 · Wet-lab bridge"
+  item: "First real wet-lab validation (or clean null) of a computational hypothesis, run with the partner lab"
+  done: false
+  eval: { metric: "dry→wet validated (or null) findings", before: "0", after: "pending" }
+  proof: "-"
+- id: E15
+  phase: "P4 · Spin-out"
+  item: "Incorporate the entity + recruit a wet-lab co-founder from the network"
+  done: false
+  eval: { metric: "incorporated entity + wet-lab co-founder", before: "none", after: "pending" }
+  proof: "-"
+- id: E16
+  phase: "P4 · Spin-out"
+  item: "age1 acceptance OR a pre-seed raise underway (dilutive, full-time)"
+  done: false
+  eval: { metric: "accelerator / pre-seed capital", before: "$0", after: "pending" }
+  proof: "-"

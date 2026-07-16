@@ -113,7 +113,7 @@ Three tracks every week — full weekly plan in **[docs/ROADMAP.md](docs/ROADMAP
 
 - 🧠 Knowledge — ramp on aging biology fast; verify every claim against a primary paper (TRUE = evidenced).
 - 🛠️ Tooling — each week ships runnable, gated code (the loop); cheap fine-tunes on Tinker/Modal.
-- 🤝 Connections — build in public; reach the hubs + people with an artifact in hand, never empty-handed.
+- 🤝 Connections — build in public; reach the hubs + people with an artifact in hand, never empty-handed. In Act II this is the bridge: the credential network (Genentech, Yale/Levine, Georgia Tech) turns computation into bench access, then a raise.
 
 ### Phase 1 — Foundation & First Signal · _Days 1–30_
 Stand up the loop, ramp on aging biology, ship the first VERIFIABLE result.
@@ -128,7 +128,12 @@ A genuine finding on OPEN data + an adopted open tool + a real collaborator.
 ### Phase 3 — Credibility & Leverage · _Days 61–90_
 Convert signal into a preprint, non-dilutive funding, and a deliberate fork in the road.
 
-**GATE 3 — a preprint OR top-decile leaderboard · non-dilutive funding · a named collaborator · a clear next-90 plan.**
+**GATE 3 — a preprint OR top-decile leaderboard · non-dilutive funding · a named collaborator · a lab partnership lined up for Act II.**
+
+### Act II — Wet-lab validation & spin-out · _Days 91–180 (Months 4–6)_
+Sequenced bridge: convert the computational finding + your credential network (Genentech, Yale/Levine orbit, Georgia Tech) into a lab-validated result, then an incorporated, fundable company. Full-time, raise-ready.
+
+**GATE 4 — a lab-validated (or cleanly null) finding · a co-authored preprint · an incorporated entity + a wet-lab co-founder · age1 acceptance OR a pre-seed raise underway.**
 
 **Signal ladder** (each rung recruits the next):
 
@@ -139,13 +144,16 @@ Convert signal into a preprint, non-dilutive funding, and a deliberate fork in t
 5. A named academic/industry collaborator
 6. Non-dilutive micro-grant (VitaDAO / Foresight)
 7. A preprint or top-decile leaderboard finish
-8. A talk/podcast + a company-or-lab decision
+8. A lab partnership (dry+wet): your computation earns bench access + co-authorship
+9. A wet-lab-validated (or cleanly null) finding with the partner lab
+10. An incorporated company + a wet-lab co-founder from the network
+11. age1 acceptance or a pre-seed raise — the sequenced fork taken: build the company
 
 ---
 
 <h2 id="execution">✅ Roadmap Execution</h2>
 
-**5/12 done (42%).** Each execution is a checkbox with a before→after eval; a box only ticks with a real result (`done` requires a non-pending before AND after — no evidence ⇒ not done, gated in CI).
+**5/16 done (31%).** Each execution is a checkbox with a before→after eval; a box only ticks with a real result (`done` requires a non-pending before AND after — no evidence ⇒ not done, gated in CI).
 
 - [x] **E1** (P1 · Foundation) — Stand up the AI-native loop (repo + self-audit + gated `make check`)
 - [x] **E2** (P1 · Foundation) — Map the field into a verified knowledge base
@@ -159,6 +167,10 @@ Convert signal into a preprint, non-dilutive funding, and a deliberate fork in t
 - [ ] **E10** (P2 · Momentum) — Secure 1 named academic/industry collaborator
 - [ ] **E11** (P3 · Leverage) — Close a non-dilutive micro-grant (VitaDAO / Foresight)
 - [ ] **E12** (P3 · Leverage) — Preprint OR top-decile leaderboard finish
+- [ ] **E13** (P4 · Wet-lab bridge) — Secure a lab partnership — computation-for-bench (Yale/Levine orbit or Genentech-alum PI)
+- [ ] **E14** (P4 · Wet-lab bridge) — First real wet-lab validation (or clean null) of a computational hypothesis, run with the partner lab
+- [ ] **E15** (P4 · Spin-out) — Incorporate the entity + recruit a wet-lab co-founder from the network
+- [ ] **E16** (P4 · Spin-out) — age1 acceptance OR a pre-seed raise underway (dilutive, full-time)
 
 ### Eval reports — before → after
 
@@ -176,6 +188,10 @@ Convert signal into a preprint, non-dilutive funding, and a deliberate fork in t
 | ⬜ E10 | named collaborators | 0 | pending |
 | ⬜ E11 | non-dilutive funding secured | $0 | pending |
 | ⬜ E12 | preprint posted / leaderboard percentile | none | pending |
+| ⬜ E13 | lab partnerships with bench access | 0 | pending |
+| ⬜ E14 | dry→wet validated (or null) findings | 0 | pending |
+| ⬜ E15 | incorporated entity + wet-lab co-founder | none | pending |
+| ⬜ E16 | accelerator / pre-seed capital | $0 | pending |
 
 ---
 
