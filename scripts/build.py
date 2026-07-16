@@ -30,7 +30,7 @@ def esc(t: object) -> str:
 def render_readme() -> str:
     meta, loop, road = load("meta"), load("loop"), load("roadmap")
     people, startups, stack, eco = load("people"), load("startups"), load("stack"), load("ecosystem")
-    turns = load("turns")
+    turns, frontier, reflections = load("turns"), load("frontier"), load("reflections")
     slug = f"{meta['repo_owner']}/{meta['repo_name']}"
     L: list[str] = []
 
@@ -63,6 +63,28 @@ def render_readme() -> str:
     for t in turns:
         L.append(f"| [{esc(t['id'])}]({t['path']}) | {esc(t['question'])} | {esc(t['stage'])} | {icon.get(t['status'],'')} {esc(t['status'])} |")
     L += ["", "---", ""]
+
+    # Frontier Radar (individual recent works) + congregational graph
+    if frontier:
+        L += ['<h2 id="frontier">🛰️ Frontier Radar</h2>', "",
+              "The frontier groundbreakers' most recent deep works — verified, with a link + a real "
+              "quote. Refreshed weekly by [`scripts/track.py`](scripts/track.py) (arXiv + GitHub).", ""]
+        for f in frontier:
+            link = f"[{esc(f['recent_work'])}]({f['link']})" if f.get("link") and f["link"] != "-" else esc(f.get("recent_work", ""))
+            L.append(f"- **{esc(f['name'])}** — {link} _({esc(f.get('year',''))})_")
+            L.append(f"  {esc(f.get('summary',''))}")
+            if f.get("quote") and f["quote"] != "-":
+                L.append(f"  > \"{esc(f['quote'])}\"")
+            if f.get("future_direction") and f["future_direction"] != "-":
+                L.append(f"  → _Future:_ {esc(f['future_direction'])}")
+        L += ["",
+              "**🕸️ Congregational view:** the field as a spatiotemporal knowledge graph "
+              "(modeled after [getzep/graphiti](https://github.com/getzep/graphiti)) — "
+              "**[open the field graph →](https://wjlgatech.github.io/longevity-loop/graph.html)**.", ""]
+        if reflections:
+            L += ["**Reflections — what else could be important?** _(synthesis, not claims)_", ""]
+            L += [f"- {esc(r)}" for r in reflections]
+        L += ["", "---", ""]
 
     # Roadmap summary
     L += ['<h2 id="90-day-roadmap">🗺️ 90-Day Roadmap</h2>', "",

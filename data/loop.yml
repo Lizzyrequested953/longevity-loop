@@ -48,6 +48,12 @@ principles:
     evidence:
       - { file: "Makefile" }
       - { grep: "audit|validate|--check", file: "Makefile" }
+  - id: frontier-tracked
+    statement: "We follow the frontier: recent works (verified) + a refreshable live tracker + a field graph."
+    evidence:
+      - { file: "data/frontier.yml" }
+      - { file: "scripts/track.py" }
+      - { file: "scripts/build_graph.py" }
   - id: turns-logged
     statement: "Every loop turn is logged with an honest status; 'done' requires a PROOF."
     evidence:

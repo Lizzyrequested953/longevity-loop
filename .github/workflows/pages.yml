@@ -19,6 +19,7 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install pyyaml
       - run: python3 scripts/build_site.py
+      - run: python3 scripts/build_graph.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }

@@ -41,6 +41,23 @@ function render(DB) {
     esc(t.question), esc(t.stage), `<span class="chip ${t.status}">${icon[t.status] || ""} ${esc(t.status)}</span>`,
   ]));
 
+  // Frontier Radar + congregational graph
+  if ((DB.frontier || []).length) {
+    section("🛰️ Frontier Radar", "Groundbreakers' most recent deep works — verified link + real quote. Refreshed weekly by scripts/track.py.");
+    $("#app").appendChild(el("p", null,
+      '<a href="graph.html" style="font-weight:600">🕸️ Open the field graph →</a> <span class="sub">— the congregational view as a spatiotemporal knowledge graph (à la getzep/graphiti).</span>'));
+    cards(DB.frontier, f => {
+      const link = f.link && f.link !== "-" ? `<a href="${f.link}" target="_blank">${esc(f.recent_work)}</a>` : esc(f.recent_work || "");
+      const q = f.quote && f.quote !== "-" ? `<span class="m">“${esc(f.quote)}”</span>` : "";
+      const fut = f.future_direction && f.future_direction !== "-" ? `<span class="m">→ ${esc(f.future_direction)}</span>` : "";
+      return `<b>${esc(f.name)}</b> <span class="sub">${esc(f.year || "")}</span><span class="m">${link}</span><span class="m">${esc(f.summary || "")}</span>${q}${fut}`;
+    });
+    if ((DB.reflections || []).length) {
+      $("#app").appendChild(el("div", "sub", "<br><b>Reflections — what else could be important?</b> <i>(synthesis, not claims)</i>"));
+      const ul = el("ul", "ladder"); DB.reflections.forEach(r => ul.appendChild(el("li", null, esc(r)))); $("#app").appendChild(ul);
+    }
+  }
+
   // Roadmap
   const road = DB.roadmap || {};
   section("🗺️ 90-Day Roadmap", "Full weekly plan in docs/ROADMAP.md.");

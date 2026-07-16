@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>longevity-loop — the field, as a spatiotemporal graph</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  #graph{height:75vh;border:1px solid var(--line);border-radius:12px;background:#0b0d10;margin-top:10px}
+  .legend span{display:inline-block;margin:6px 10px 0 0;font-size:12.5px;color:var(--dim)}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+</style>
+</head>
+<body>
+<header style="padding:36px 20px 6px">
+  <div class="eyebrow">CONGREGATIONAL VIEW · BI-TEMPORAL KNOWLEDGE GRAPH</div>
+  <h1 style="font-size:26px">🕸️ The Field, as a Graph</h1>
+  <p class="lede">People ↔ orgs ↔ topics ↔ recent works — a spatiotemporal KG modeled after
+  <a href="https://github.com/getzep/graphiti" target="_blank">getzep/graphiti</a> (edges carry a
+  <code>since</code> year), refreshed as the loop turns. <a href="index.html">← dashboard</a></p>
+</header>
+<div class="wrap">
+  <div class="legend">
+    <span><i class="dot" style="background:#7c5cff"></i>Researcher</span>
+    <span><i class="dot" style="background:#4fd1a5"></i>Org / startup</span>
+    <span><i class="dot" style="background:#f0a868"></i>Topic</span>
+    <span><i class="dot" style="background:#6a9bcc"></i>Recent work</span>
+  </div>
+  <div id="graph"></div>
+  <p class="sub" id="meta"></p>
+</div>
+<script src="https://unpkg.com/force-graph@1.43.5/dist/force-graph.min.js"></script>
+<script>
+const COLOR = { person:"#7c5cff", org:"#4fd1a5", topic:"#f0a868", work:"#6a9bcc" };
+fetch("graph.json").then(r=>r.json()).then(g=>{
+  document.getElementById("meta").textContent =
+    `${g.counts.nodes} nodes · ${g.counts.links} links · schema: ${g.schema}`;
+  const el = document.getElementById("graph");
+  const G = ForceGraph()(el)
+    .graphData(g)
+    .nodeId("id")
+    .nodeLabel(n => `${n.label}${n.since ? " ("+n.since+")" : ""}`)
+    .nodeColor(n => COLOR[n.type] || "#999")
+    .nodeRelSize(5)
+    .nodeVal(n => n.type==="topic" ? 8 : n.type==="org" ? 4 : 3)
+    .linkColor(()=>"rgba(150,150,160,0.25)")
+    .linkDirectionalParticles(l => l.rel==="authored" ? 2 : 0)
+    .linkDirectionalParticleWidth(1.5)
+    .onNodeClick(n => { if (n.url) window.open(n.url, "_blank"); })
+    .width(el.clientWidth).height(el.clientHeight);
+  addEventListener("resize", ()=>G.width(el.clientWidth).height(el.clientHeight));
+}).catch(()=>{ document.getElementById("meta").textContent = "Could not load graph.json (open via the deployed site)."; });
+</script>
+</body>
+</html>

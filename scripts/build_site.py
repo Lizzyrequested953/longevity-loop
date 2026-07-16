@@ -21,7 +21,7 @@ def load(name: str):
 
 
 def main() -> int:
-    bundle = {n: load(n) for n in ("meta", "loop", "roadmap", "turns",
+    bundle = {n: load(n) for n in ("meta", "loop", "roadmap", "turns", "frontier", "reflections",
                                    "people", "startups", "stack", "ecosystem")}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(bundle, ensure_ascii=False, indent=2))

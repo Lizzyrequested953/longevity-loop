@@ -22,3 +22,8 @@
 - { name: "Open Problems in Single-Cell", kind: benchmark, url: "https://github.com/openproblems-bio/openproblems", note: "Community benchmarking harness (tasks/datasets/metrics) to fairly evaluate a model vs baselines." }
 - { name: "LAB-Bench", kind: benchmark, url: "https://github.com/Future-House/LAB-Bench", note: "2,457-question benchmark for LLMs on biology research tasks (literature, sequences, DBs)." }
 - { name: "BixBench", kind: benchmark, url: "https://github.com/Future-House/BixBench", note: "Benchmark for LLM agents on real computational-biology analysis workflows." }
+# ── spatiotemporal knowledge-graph representation (for the congregational field graph) ──
+- { name: "Graphiti", kind: graph, url: "https://github.com/getzep/graphiti", note: "Bi-temporal KG engine (~28k★): ingests text via LLMs, tracks when facts become valid/invalid — query the field 'as of year X'. The model for our field graph." }
+- { name: "cognee", kind: graph, url: "https://github.com/topoteretes/cognee", note: "AI-memory platform that auto-builds a vector+graph KG from documents across sessions — accumulating field structure for agents." }
+- { name: "PyTorch Geometric Temporal", kind: graph, url: "https://github.com/benedekrozemberczki/pytorch_geometric_temporal", note: "Spatiotemporal GNNs (DCRNN, STGCN, MTGNN) to forecast/learn trends over time-stamped graphs — reach for this to model trajectories, not just represent them." }
+- { name: "TGB (Temporal Graph Benchmark)", kind: graph, url: "https://github.com/shenyangHuang/TGB", note: "The field-standard NeurIPS benchmark for temporal graph + temporal-KG models — evaluate whether a model captures evolving structure." }

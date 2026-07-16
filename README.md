@@ -49,6 +49,64 @@ Every turn of the loop, logged honestly. `done` requires a PROOF (result incl. t
 
 ---
 
+<h2 id="frontier">🛰️ Frontier Radar</h2>
+
+The frontier groundbreakers' most recent deep works — verified, with a link + a real quote. Refreshed weekly by [`scripts/track.py`](scripts/track.py) (arXiv + GitHub).
+
+- **Alex Zhavoronkov** — [The End of Aging Clocks: Training Foundation Models to Reason in Aging and Longevity](https://www.biorxiv.org/content/10.64898/2026.03.28.714980v1) _(2026)_
+  Longevity-LLM v0.1 (fine-tuned Qwen3-14B) hit 4.34-yr MAE epigenetic-age prediction (beating Horvath) across methylation/proteomics/clinical/RNA, and handled multiple longevity tasks.
+  > "These results demonstrate that a single modestly sized LLM can match or replace purpose-built aging clocks across data modalities."
+  → _Future:_ Interim report from Insilico's Multi-Modal AI Gym for Science (MMAI) — foundation models for drug discovery + aging.
+- **Morgan Levine** — [Systems Age: one blood methylation test quantifying aging across 11 physiological systems](https://www.nature.com/articles/s43587-025-00958-3) _(2025)_
+  DNA-methylation clocks that score aging separately per system (heart, lung, brain, immune…) from one blood draw, beating global clocks at system-relevant disease prediction.
+  > "most epigenetic clocks provide a single age estimate, overlooking within-person variation."
+  → _Future:_ System-specific clocks usable clinically to track how interventions shift aging in individual organ systems.
+- **Tony Wyss-Coray** — [Plasma proteomic signatures of cellular aging predict human disease](https://pubmed.ncbi.nlm.nih.gov/42297981/) _(2026)_
+  From >7,000 plasma proteins in 60,542 people, ML models estimate biological age of 40+ cell types, linking cell-type-specific aging to disease and mortality.
+  > "Aging is asynchronous across cells and organs."
+  → _Future:_ Cell-type-resolved plasma proteomic clocks as clinical biomarkers from a single blood test.
+- **Vadim Gladyshev** — [Mammalian aging involves genome-wide splicing degeneration leading to functional decline](https://www.biorxiv.org/content/10.64898/2026.06.26.734787v1) _(2026)_
+  Integrative mouse/human analysis shows aging systematically loses RNA-splicing fidelity ('splicing degeneration'), rising with age but alleviated by calorie restriction or rapamycin — a proposed new hallmark.
+  > "aging is characterized by systematic deterioration of the fidelity of RNA splicing, here termed splicing degeneration"
+  → _Future:_ Splicing degeneration as 'a promising target for aging interventions acting to reverse' it.
+- **João Pedro de Magalhães** — [Translational toolkit for reproducible, cross-study profiling of human ageing hallmarks](https://www.biorxiv.org/content/10.64898/2026.04.20.719545v1) _(2026)_
+  A validated assay toolkit to simultaneously quantify 8+ ageing hallmarks (senescence, immune ageing, mTOR, autophagy, genomic instability…) in clinically accessible human blood and tissue.
+  > "a validated, high-resolution toolkit for the simultaneous quantification of multiple ageing hallmarks in clinically accessible human samples"
+  → _Future:_ Standardize hallmark measurement to overcome methodological heterogeneity and translate into human clinical studies.
+- **Peter Fedichev** — [A Minimal Model Explains Aging Regimes and Guides Intervention Strategies](https://www.biorxiv.org/content/10.1101/2025.08.25.671954v1) _(2025)_
+  Reduces aging physiology to three variables (resilience, entropic damage, regulatory noise), yielding two regimes: linear damage-driven aging in stable species like humans vs intrinsic instability in mice/flies.
+  > "In stable species, including humans, aging is driven by linear damage accumulation that gradually erodes resilience"
+  → _Future:_ A three-level intervention roadmap: target dynamic hallmarks, reduce physiological noise, slow/reverse entropic damage.
+- **Jacob Kimmel** — [In silico design of epigenetic reprogramming payloads](https://openreview.net/forum?id=kPQ6NKVAiT) _(2025)_
+  NewLimit's generative model (protein-foundation-model transfer learning) designs transcription-factor reprogramming payloads from sparse sampling of the combinatorial TF space, in a lab-in-the-loop.
+  > "Through diverse epigenetic codes, human cells execute distinct programs from a common genome"
+  → _Future:_ Run the model lab-in-the-loop to design reprogramming interventions far faster than pure experiments.
+- **George Church** — [Replacement as an aging intervention (Nature Aging Perspective)](https://pubmed.ncbi.nlm.nih.gov/40341243/) _(2025)_
+  Argues replacing aged cells/tissues/organs is an underappreciated, near-term-feasible strategy where drug interventions have not yet proven durable in humans.
+  > "there is a lack of interventions conclusively shown to attenuate the processes of aging in humans"
+  → _Future:_ Develop replacement-based interventions (cell/tissue/organ) alongside reprogramming and gene therapy.
+- **Steve Horvath** — [Epigenetic ageing clocks: statistical methods and emerging computational challenges](https://www.nature.com/articles/s41576-024-00807-w) _(2025)_
+  Nature Reviews Genetics review (Teschendorff & Horvath) on the statistical foundations of epigenetic clocks and open problems in interpretation, cell-type heterogeneity, and single-cell methods.
+  > "many computational and statistical challenges remain that limit our understanding, interpretation and application of epigenetic clocks"
+  → _Future:_ Interpretable clocks built at cell-type and single-cell resolution to make epigenetic age causally + clinically meaningful.
+- **Matt Kaeberlein** — [Exercise and Weekly Sirolimus (Rapamycin) in Older Adults: RAPA-EX-01 RCT](https://onlinelibrary.wiley.com/doi/10.1002/jcsm.70274) _(2026)_
+  RCT (40 adults, 65-85) found once-weekly 6 mg rapamycin did NOT boost — and may have slightly blunted — functional gains from a 13-week exercise program, with more adverse events. A clean, useful negative result.
+  > "did not enhance, and in sensitivity analyses, it may have modestly attenuated short-term functional improvements from a home exercise programme"
+  → _Future:_ Test alternative rapamycin dosing/timing (e.g. mTORC1 cycling) before combining with exercise in older adults.
+
+**🕸️ Congregational view:** the field as a spatiotemporal knowledge graph (modeled after [getzep/graphiti](https://github.com/getzep/graphiti)) — **[open the field graph →](https://wjlgatech.github.io/longevity-loop/graph.html)**.
+
+**Reflections — what else could be important?** _(synthesis, not claims)_
+
+- Clocks are collapsing into foundation models: Zhavoronkov's Longevity-LLM replacing purpose-built clocks + Kimmel's protein-FM reprogramming design → the field's own 'FM-ops' moment. A unified multimodal aging FM is the obvious open target.
+- Aging is resolving from one number to many: Systems Age (11 systems), Wyss-Coray (40+ cell types), Gladyshev (splicing as a new hallmark). The gap: a shared, cell/system-resolved BENCHMARK so these aren't incomparable — a natural longevity-loop contribution.
+- Negative results are becoming first-class (Kaeberlein's rapamycin+exercise null). An open registry of honest longevity nulls would be high-trust signal and is exactly the no-evidence⇒No discipline the field needs.
+- Correlation ≠ cause is the recurring caveat (Horvath): the frontier wants INTERPRETABLE, causal clocks. A loop turn probing whether an intervention moves a clock in a held-out, pre-registered way is more valuable than a new clock.
+- The data wall is inverting in biology (multiomic tokens > internet-text tokens): the scarce input is now well-curated, standardized human hallmark data (de Magalhães' toolkit) — curation, not compute, is the bottleneck to attack.
+- Two camps to bridge: 'repair/replace damage' (Church, Fedichev's entropic damage) vs 'reprogram/rejuvenate' (Kimmel, Levine). A model that predicts which regime a given tissue is in could route interventions — an unclaimed synthesis.
+
+---
+
 <h2 id="90-day-roadmap">🗺️ 90-Day Roadmap</h2>
 
 Three tracks every week — full weekly plan in **[docs/ROADMAP.md](docs/ROADMAP.md)**:

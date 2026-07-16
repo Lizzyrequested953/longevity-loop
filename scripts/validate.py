@@ -13,6 +13,7 @@ REQUIRED = {
     "startups": ["name", "url", "focus"],
     "stack": ["name", "url", "kind"],
     "ecosystem": ["name", "url", "type"],
+    "frontier": ["name", "recent_work", "link"],
 }
 
 

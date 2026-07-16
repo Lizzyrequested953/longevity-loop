@@ -1,4 +1,4 @@
-.PHONY: build validate audit site check help
+.PHONY: build validate audit site graph track check help
 
 help:
 	@echo "longevity-loop — an AI-native compounding loop for aging science"
@@ -18,6 +18,14 @@ audit:
 
 site:
 	python3 scripts/build_site.py
+	python3 scripts/build_graph.py
+
+graph:
+	python3 scripts/build_graph.py
+
+# Refresh live frontier signal (arXiv + GitHub) into data/_frontier.yml (needs network).
+track:
+	python3 scripts/track.py
 
 # Finish line: data well-formed, still an AI-native loop, and generated docs match.
 check: validate audit
