@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>longevity-loop — daily recaps</title>
+  <link>https://wjlgatech.github.io/longevity-loop/writings/</link>
+  <description>Build-in-public daily recaps for an AI x longevity research loop.</description>
+  <item>
+    <title>The Flywheel Spins Even When Your Hands Are Off It</title>
+    <link>https://wjlgatech.github.io/longevity-loop/writings/2026-07-16.html</link>
+    <guid isPermaLink="true">https://wjlgatech.github.io/longevity-loop/writings/2026-07-16.html</guid>
+    <category>longevity-loop</category>
+    <pubDate>2026-07-16</pubDate>
+    <description>No code shipped today. The synthesis script surfaced three candidate frontier updates — reviews from Wyss-Coray on biological clocks and Gladyshev on epigenetic dysregulation, plus a Barzilai study on &#x27;super movers&#x27; — all still unverified proposals awaiting human promotion. A quiet, honest scaffolding day where the automated pipeline earned its keep and I earned nothing.</description>
+  </item>
+
+</channel></rss>
