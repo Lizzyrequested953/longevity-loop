@@ -13,6 +13,8 @@ import json
 import os
 import pathlib
 import re
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -21,30 +23,42 @@ import yaml
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 OUT = DATA / "_frontier.yml"
+_arxiv_ok = True  # flips off on the first 429 so we don't hammer / hang
 
 
-def _get(url: str, headers: dict | None = None) -> bytes:
+def _get(url: str, headers: dict | None = None, timeout: int = 12) -> bytes:
     req = urllib.request.Request(url, headers=headers or {})
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
 
 def arxiv_latest(name: str) -> dict:
-    """Most recent arXiv paper matching an author surname (best-effort, flagged)."""
+    """Most recent arXiv paper by surname (best-effort). arXiv rate-limits hard and
+    aging work lives mostly on bioRxiv/journals — so this is a bonus, never fatal.
+    On the first 429 we stop trying arXiv for the rest of the run (honest note)."""
+    global _arxiv_ok
+    if not _arxiv_ok:
+        return {"status": "arxiv skipped (rate-limited this run; see frontier.yml for curated works)"}
     surname = name.split()[-1]
     q = urllib.parse.quote(f'au:"{surname}"')
     url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results=1"
     try:
         xml = _get(url).decode("utf-8", "ignore")
+        time.sleep(3)  # arXiv asks for ~3s between calls
+    except urllib.error.HTTPError as exc:
+        if exc.code == 429:
+            _arxiv_ok = False
+            return {"status": "arxiv rate-limited (aging work is mostly bioRxiv/journals — see frontier.yml)"}
+        return {"status": f"arxiv http {exc.code}"}
     except Exception as exc:  # noqa: BLE001
-        return {"status": f"arxiv error: {exc}"}
+        return {"status": f"arxiv error: {type(exc).__name__}"}
     m_t = re.search(r"<entry>.*?<title>(.*?)</title>", xml, re.S)
-    m_d = re.search(r"<entry>.*?<published>(.*?)</published>", xml, re.S)
     m_id = re.search(r"<entry>.*?<id>(.*?)</id>", xml, re.S)
+    m_d = re.search(r"<entry>.*?<published>(.*?)</published>", xml, re.S)
     if not (m_t and m_id):
-        return {"status": "no arxiv match (may publish in journals/bioRxiv — check manually)"}
+        return {"status": "no arxiv match (may publish in journals/bioRxiv)"}
     return {"title": " ".join(m_t.group(1).split()), "date": (m_d.group(1)[:10] if m_d else ""),
-            "url": m_id.group(1).strip(), "note": "arxiv surname match — verify it's the same person"}
+            "url": m_id.group(1).strip(), "note": "arxiv surname match — verify same person"}
 
 
 def gh_repo(slug: str) -> dict:

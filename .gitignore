@@ -4,4 +4,3 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 site/data.json
-data/_frontier.yml
